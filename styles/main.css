@@ -38,6 +38,10 @@
   display: inline-block;
 }
 
+.fakedropbtn {
+  padding: 0px 16px 3px;
+}
+
 .fakedropbtn:hover {
   background-color: var(--darktheme-dropdown-background-hover, lightgrey);
   border-color: var(--darktheme-dropdown-border-hover, lightblue);
