@@ -24,7 +24,7 @@
   background-color: var(--vscode-window-background, grey);
   color: var(--vscode-editor-foreground, tan);
   padding: 4px 16px 4px;
-  font-size: 16px;
+  font-size: calc(1rem + 0.3vmin);
   border: none;
   border-color: transparent;
   border-width: 1px;
@@ -38,6 +38,7 @@
   display: inline-block;
 }
 
+/*Quick and dirty styling to reduce the size of an <a> relative to <button>s*/
 .fakedropbtn {
   padding: 0px 16px 3px;
 }
@@ -48,6 +49,7 @@
   border-width: 1px;
   border-style: solid;
 }
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -57,6 +59,7 @@
   z-index: 2;
   background-color: var(--darktheme-dropdown-background);
 }
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: var(--darktheme-dropdown-foreground, lightblue);
@@ -68,7 +71,7 @@
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: var(--darktheme-dropdown-text-hover, lightblue);
-  border-radius: 4%;
+  border-radius: 5%;
 }
 
 /* Show the dropdown menu on hover */
@@ -78,7 +81,7 @@
   border-width: 2px;
   border-style: solid;
   border-color: var(--darktheme-dropdown-border, white);
-  border-radius: 4%;
+  border-radius: 5%;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -96,21 +99,16 @@
   border-color: var(--menu-border, white);
 }
 
-#floating-menu {
+#floating-header {
   background-color: var(--vscode-window-background, black);
-  width: 80vw;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 body {
-  /* background-image: url('/images/doggos-bg.jpg');
-  background-repeat: repeat; */
   position: relative;
   background-color: var(--vscode-window-background, black);
-  width: 80vw;
-  margin: 0 10vw;
 }
 
 h1 {
@@ -129,7 +127,7 @@ p {
   border-color: var(--vscode-tabs-editor-border, lightgrey);
   border-width: 1px;
   border-style: solid;
-  font-size: calc(0.5rem + 1vmin);
+  font-size: calc(1rem + 0.3vmin);
   font-family: var(--vscode-font-styles, monospace);
   padding: 1%;
 }
@@ -164,4 +162,28 @@ p {
 
 #archie-head {
   float: left;
+  height: calc(1.5rem + 5vmin);
+  width: auto;
+}
+
+/*leave some blank space on the sides on medium+ size displays*/
+@media only screen and (min-width: 600px) {
+  body {
+    width: 90vw;
+    margin: 0 5vw;
+  }
+  #floating-header {
+    width: 90vw;
+  }
+}
+
+/*use more screen real estate on smaller devices*/
+@media only screen and (max-width: 600px) {
+  body {
+    width: 95vw;
+    margin: 0 2.5vw;
+  }
+  #floating-header {
+    width: 95vw;
+  }
 }
