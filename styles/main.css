@@ -112,23 +112,38 @@ body {
 }
 
 h1 {
-  font-family: var(--vscode-font-styles, 'monospace');
   font-size: calc(1.5rem + 3vmin);
+  color: var(--vscode-font-color-css-entity-tag);
 }
 
+h2 {
+  font-size: calc(1rem + 2vmin);
+  color: var(--vscode-font-color-css-entity-name, lightblue);
+}
+
+h3 {
+  color: var(--vscode-font-color-markup-inserted, cyan);
+}
+
+h1,
+h2,
+h3,
+li,
 p {
-  color: var(--vscode-font-color-css-entity-value, orange);
+  font-family: var(--vscode-font-styles, 'monospace');
 }
 
-#main-content {
-  position: relative;
-  max-height: 86vh;
+p,
+ul {
+  color: var(--vscode-font-color-css-entity-value, orange);
+  font-size: calc(1rem + 0.3vmin);
+}
+
+.main-content {
   background-color: var(--vscode-tabs-editor-background, grey);
   border-color: var(--vscode-tabs-editor-border, lightgrey);
   border-width: 1px;
   border-style: solid;
-  font-size: calc(1rem + 0.3vmin);
-  font-family: var(--vscode-font-styles, monospace);
   padding: 1%;
 }
 
@@ -156,14 +171,11 @@ p {
   color: var(--vscode-font-color-css-entity-name, darkblue);
 }
 
-.vs-fonts {
-  font-family: var(--vscode-font-styles, monospace);
-}
-
 #archie-head {
   float: left;
   height: calc(1.5rem + 5vmin);
   width: auto;
+  padding-right: 10px;
 }
 
 /*leave some blank space on the sides on medium+ size displays*/

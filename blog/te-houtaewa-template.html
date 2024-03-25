@@ -3,41 +3,93 @@
   <head>
     <title>Stories and Legends (PAGE title)</title>
     <meta charset="UTF-8" />
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="/images/archie-head.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
-    <h1>The Story of Te Houtaewa (PAGE heading)</h1>
-    <h2>
-      E kore e mau i a koe, he wae kai pakiaka.
-      <em
-        >A foot accustomed to running over roots makes the speediest runner.</em
-      >
-      (Optional SUB title)
-    </h2>
-    <h3>10 November 2010</h3>
+    <div id="floating-header">
+      <span>
+        <img id="archie-head" src=/images/archie-head-big.png alt="apprehensive
+        dog face" width="150" height="150"/>
+        <h1>.Blog {</h1>
+      </span>
+      <div id="navigation-menu">
+        <a
+          class="dropbtn fakedropbtn"
+          href="https://joel-cain-allan.github.io/"
+          style="font-family: 'Material Symbols Outlined'"
+          >Home</a
+        >
 
-    <p>
-      Te Houtaewa was the fastest runner of his day and played many pranks on
-      his peoples enemies. One morning his mother wanted kumara for the hangi
-      (earth oven) and asked Te Houtaewa to go to the gardens at Te Kao, a short
-      distance away. He agreed to fetch the kumara and told his mother to
-      prepare the hangi.
-    </p>
-    <p>
-      Instead of going to the nearby gardens, Te Houtaewa set off for Ahipara as
-      he wanted to annoy some Te Rarawa people who lived there. Carrying two
-      large baskets for the kumara, he ran like the wind, completing the journey
-      over the hard sands of Te Oneroa a Tohe (Ninety Mile Beach) in the few
-      hours it takes a good hangi to heat up properly. On reaching Ahipara, he
-      went straight to the people's kumara pataka (storehouse for the sweet
-      potatoes) situated at the foot of the hill Whangatauatia.
-    </p>
-    <p>
-      While Te Houtaewa was filling his baskets with kumara he was spotted
-      stealing the kai (food). He was immediately recognised.
-    </p>
+        <div class="dropdown" id="tech-navigation-menu">
+          <button class="dropbtn">Tech</button>
+          <div class="dropdown-content">
+            <a href="/blog/html-css.html">HTML-CSS</a>
+          </div>
+        </div>
+        <div class="dropdown" id="core-navigation-menu">
+          <button class="dropbtn">Core</button>
+          <div class="dropdown-content">
+            <a href="#">Core 1 incoming</a>
+          </div>
+        </div>
+        <div class="dropdown" id="core-navigation-menu">
+          <button class="dropbtn">Templates</button>
+          <div class="dropdown-content">
+            <a href="/blog/te-houtaewa-template.html">Te Houtaewa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <h1>The Story of Te Houtaewa (PAGE heading)</h1>
+      <h2>
+        E kore e mau i a koe, he wae kai pakiaka.
+        <em
+          >A foot accustomed to running over roots makes the speediest
+          runner.</em
+        >
+        (Optional SUB title)
+      </h2>
+      <h3>10 November 2010</h3>
 
+      <p>
+        Te Houtaewa was the fastest runner of his day and played many pranks on
+        his peoples enemies. One morning his mother wanted kumara for the hangi
+        (earth oven) and asked Te Houtaewa to go to the gardens at Te Kao, a
+        short distance away. He agreed to fetch the kumara and told his mother
+        to prepare the hangi.
+      </p>
+      <p>
+        Instead of going to the nearby gardens, Te Houtaewa set off for Ahipara
+        as he wanted to annoy some Te Rarawa people who lived there. Carrying
+        two large baskets for the kumara, he ran like the wind, completing the
+        journey over the hard sands of Te Oneroa a Tohe (Ninety Mile Beach) in
+        the few hours it takes a good hangi to heat up properly. On reaching
+        Ahipara, he went straight to the people's kumara pataka (storehouse for
+        the sweet potatoes) situated at the foot of the hill Whangatauatia.
+      </p>
+      <p>
+        While Te Houtaewa was filling his baskets with kumara he was spotted
+        stealing the kai (food). He was immediately recognised.
+      </p>
+    </div>
+    <h1 class="header-colour">}</h1>
     <!-- this is a comment. -->
   </body>
+  <footer>
+    <p class="footertext">&copy; Joel Allan 2024</p>
+  </footer>
 </html>
