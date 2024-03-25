@@ -1,0 +1,164 @@
+:root {
+  --menu-border: #454545;
+  --darktheme-divider-lines: #2d2d30;
+  --darktheme-dropdown-background: #1f1f1f;
+  --darktheme-dropdown-border: #3c3c3c;
+  --darktheme-dropdown-foreground: #ccc;
+  --darktheme-dropdown-background-hover: #3a3d41;
+  --darktheme-dropdown-border-hover: #007acc;
+  --darktheme-dropdown-text-hover: #007acc;
+  --vscode-font-color-comments: #6a9955;
+  --vscode-font-color-css-entity-tag: #d7ba7d;
+  --vscode-font-color-css-entity-name: #569cd6;
+  --vscode-font-color-markup-inserted: #b5cea8;
+  --vscode-font-color-css-entity-value: #ce9178;
+  --vscode-window-background: #181818;
+  --vscode-editor-foreground: #ccc;
+  --vscode-font-styles: 'Inconsolata', 'Courier New', monospace;
+  --vscode-tabs-editor-background: #1f1f1f;
+  --vscode-tabs-editor-border: #ffffff17;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--vscode-window-background, grey);
+  color: var(--vscode-editor-foreground, tan);
+  padding: 4px 16px 4px;
+  font-size: 16px;
+  border: none;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.fakedropbtn:hover {
+  background-color: var(--darktheme-dropdown-background-hover, lightgrey);
+  border-color: var(--darktheme-dropdown-border-hover, lightblue);
+  border-width: 1px;
+  border-style: solid;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  background-color: var(--darktheme-dropdown-background);
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--darktheme-dropdown-foreground, lightblue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--darktheme-dropdown-text-hover, lightblue);
+  border-radius: 4%;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: var(--darktheme-dropdown-background);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--darktheme-dropdown-border, white);
+  border-radius: 4%;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--darktheme-dropdown-background-hover, lightgrey);
+  border-color: var(--darktheme-dropdown-border-hover, lightblue);
+  border-width: 1px;
+  border-style: solid;
+}
+
+#navigation-menu {
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: var(--menu-border, white);
+}
+
+#floating-menu {
+  background-color: var(--vscode-window-background, black);
+  width: 80vw;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+body {
+  /* background-image: url('/images/doggos-bg.jpg');
+  background-repeat: repeat; */
+  position: relative;
+  background-color: var(--vscode-window-background, black);
+  width: 80vw;
+  margin: 0 10vw;
+}
+
+h1 {
+  font-family: var(--vscode-font-styles, 'monospace');
+  font-size: calc(1.5rem + 3vmin);
+}
+
+p {
+  color: var(--vscode-font-color-css-entity-value, orange);
+}
+
+#main-content {
+  position: relative;
+  max-height: 86vh;
+  background-color: var(--vscode-tabs-editor-background, grey);
+  border-color: var(--vscode-tabs-editor-border, lightgrey);
+  border-width: 1px;
+  border-style: solid;
+  font-size: calc(0.5rem + 1vmin);
+  font-family: var(--vscode-font-styles, monospace);
+  padding: 1%;
+}
+
+.footertext {
+  font-size: 12px;
+}
+
+.comment-colour {
+  color: var(--vscode-font-color-comments, green);
+}
+
+.header-colour {
+  color: var(--vscode-font-color-css-entity-tag, yellow);
+}
+
+.string-colour {
+  color: var(--vscode-font-color-css-entity-value, orange);
+}
+
+.css-property-colour {
+  color: var(--vscode-font-color-markup-inserted, blue);
+}
+
+.html-tag-colour {
+  color: var(--vscode-font-color-css-entity-name, darkblue);
+}
+
+.vs-fonts {
+  font-family: var(--vscode-font-styles, monospace);
+}
+
+#archie-head {
+  padding: auto;
+  float: left;
+}
