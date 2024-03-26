@@ -1,80 +1,86 @@
-<head>
-  <title>Dev Academy Blog</title>
-  <link rel="icon" type="image/png" href="/images/archie-head.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
-  <div id="floating-header">
-    <span>
-      <img id="archie-head" src=/images/archie-head-big.png alt="apprehensive
-      dog face" width="150" height="150"/>
-      <h1>.Blog {</h1>
-    </span>
-    <div id="navigation-menu">
-      <a
-        class="dropbtn fakedropbtn"
-        href="https://joel-cain-allan.github.io/"
-        style="font-family: 'Material Symbols Outlined'"
-        >Home</a
-      >
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dev Academy Blog</title>
+    <link rel="icon" type="image/png" href="/images/archie-head.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-      <div class="dropdown" id="tech-navigation-menu">
-        <button class="dropbtn">Tech</button>
-        <div class="dropdown-content">
-          <a href="/blog/html-css.html">HTML-CSS</a>
+  <body>
+      <div id="floating-header">
+        <span>
+          <img id="archie-head" src=/images/archie-head-big.png alt="apprehensive
+          dog face" width="150" height="150"/>
+          <h1>.Blog {</h1>
+        </span>
+        <div id="navigation-menu">
+          <a
+            class="dropbtn fakedropbtn"
+            href="/joel-cain-allan.github.io/"
+            style="font-family: 'Material Symbols Outlined'"
+            >Home</a
+          >
+    
+          <div class="dropdown" id="tech-navigation-menu">
+            <button class="dropbtn">Tech</button>
+            <div class="dropdown-content">
+              <a href="/blog/html-css.html">HTML-CSS</a>
+            </div>
+          </div>
+          <div class="dropdown" id="core-navigation-menu">
+            <button class="dropbtn">Core</button>
+            <div class="dropdown-content">
+              <a href="#">Core 1 incoming</a>
+            </div>
+          </div>
+          <div class="dropdown" id="core-navigation-menu">
+            <button class="dropbtn">Templates</button>
+            <div class="dropdown-content">
+              <a href="/blog/te-houtaewa-template.html">Te Houtaewa</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="dropdown" id="core-navigation-menu">
-        <button class="dropbtn">Core</button>
-        <div class="dropdown-content">
-          <a href="#">Core 1 incoming</a>
-        </div>
+
+    <div class="main-content">
+      <div id="top-main">
+        <h1>Welcome</h1>
+        <p>Hello! Welcome to my Dev Academy blog.</p>
+        <p>Use the navigation bar to find your way around to blog posts.</p>
       </div>
-      <div class="dropdown" id="core-navigation-menu">
-        <button class="dropbtn">Templates</button>
-        <div class="dropdown-content">
-          <a href="/blog/te-houtaewa-template.html">Te Houtaewa</a>
-        </div>
+      <div id="bottom-main">
+        <p class="comment-colour">
+          //It's definitely a little clich&eacute; to style it like VSCode's
+          default dark theme, but it felt like an appropriate move.
+
+          <br />
+          <p>
+          If you're at all interested (and don't want to use the colour-picker),
+          here are the font hexcodes:
+        </p>
+        </p>
+        <ul>
+          <li class="header-colour">Header: #D7BA7D</li>
+          <li class="string-colour">Text: #CE9178</li>
+          <li class="comment-colour">Comments: #6A9955</li>
+          <li class="css-property-colour">CSS Property Name: #B5CEA8</li>
+          <li class="html-tag-colour">HTML Tag: #569CD6</li>
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="main-content">
-    <div id="top-main">
-      <p>Hello! Welcome to my Dev Academy blog.</p>
-      <p>Use the navigation bar to find your way around to blog posts.</p>
-    </div>
-    <div id="bottom-main">
-      <p class="comment-colour">
-        //It's definitely a little clich&eacute; to style it like VSCode's
-        default dark theme, but it felt like an appropriate move.
-      </p>
-      <br />
-      <p>
-        If you're at all interested (and don't want to use the colour-picker),
-        here are the font hexcodes:
-      </p>
-      <ul>
-        <li class="header-colour">Header: #D7BA7D</li>
-        <li class="string-colour">Text: #CE9178</li>
-        <li class="comment-colour">Comments: #6A9955</li>
-        <li class="css-property-colour">CSS Property Name: #B5CEA8</li>
-        <li class="html-tag-colour">HTML Tag: #569CD6</li>
-      </ul>
-    </div>
-  </div>
-  <h1 class="header-colour">}</h1>
-</body>
-<footer>
-  <p class="footertext">&copy; Joel Allan 2024</p>
-</footer>
+  </body>
+  <footer>
+    <p class="footertext">&copy; Joel Allan 2024</p>
+  </footer>
+</html>

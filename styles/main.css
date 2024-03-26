@@ -17,6 +17,23 @@
   --vscode-font-styles: 'Inconsolata', 'Courier New', monospace;
   --vscode-tabs-editor-background: #1f1f1f;
   --vscode-tabs-editor-border: #ffffff17;
+  --vscode-token-color: #b267e6;
+}
+
+code {
+  background-color: #bfbfbf66;
+}
+
+a:link {
+  color: var(--vscode-token-color, pink);
+}
+
+a:visited {
+  color: var(--vscode-token-color, pink);
+}
+
+img {
+  max-width: 90vw;
 }
 
 /* Dropdown Button */
@@ -98,7 +115,9 @@
   border-width: 1px;
   border-color: var(--menu-border, white);
 }
-
+header {
+  position: sticky;
+}
 #floating-header {
   background-color: var(--vscode-window-background, black);
   position: sticky;
@@ -111,13 +130,21 @@ body {
   background-color: var(--vscode-window-background, black);
 }
 
-h1 {
+h1,
+.main-content::after,
+.main-content h1::after,
+footer::before {
   font-size: calc(1.5rem + 3vmin);
   color: var(--vscode-font-color-css-entity-tag);
+  font-weight: 700;
+}
+
+.main-content h1::after {
+  content: ' (';
 }
 
 h2 {
-  font-size: calc(1rem + 2vmin);
+  font-size: calc(1rem + 1vmin);
   color: var(--vscode-font-color-css-entity-name, lightblue);
 }
 
@@ -125,10 +152,18 @@ h3 {
   color: var(--vscode-font-color-markup-inserted, cyan);
 }
 
+h4 {
+  color: var(--vscode-font-color-comments, green);
+}
+
 h1,
 h2,
 h3,
+h4,
 li,
+.main-content::after,
+footer::before,
+.main-content h1::after,
 p {
   font-family: var(--vscode-font-styles, 'monospace');
 }
@@ -176,6 +211,23 @@ ul {
   height: calc(1.5rem + 5vmin);
   width: auto;
   padding-right: 10px;
+}
+
+footer::before {
+  content: '}';
+}
+
+.main-content::after {
+  color: var(--vscode-font-color-css-entity-tag);
+
+  font-size: calc(1.5rem + 3vmin);
+  font-size: calc();
+  content: ')';
+}
+
+h4::before {
+  display: inline;
+  content: '//';
 }
 
 /*leave some blank space on the sides on medium+ size displays*/

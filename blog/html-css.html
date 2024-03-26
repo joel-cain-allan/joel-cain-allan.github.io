@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dev Academy Blog</title>
+    <link rel="icon" type="image/png" href="/images/archie-head.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/html-css-blog.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div id="floating-header">
+      <span>
+        <img id="archie-head" src=/images/archie-head-big.png alt="apprehensive
+        dog face" width="150" height="150"/>
+        <h1>.Blog {</h1>
+      </span>
+      <div id="navigation-menu">
+        <a
+          class="dropbtn fakedropbtn"
+          href="/joel-cain-allan.github.io/"
+          style="font-family: 'Material Symbols Outlined'"
+          >Home</a
+        >
+        <div class="dropdown" id="tech-navigation-menu">
+          <button class="dropbtn">Tech</button>
+          <div class="dropdown-content">
+            <a href="/blog/html-css.html">HTML-CSS</a>
+          </div>
+        </div>
+        <div class="dropdown" id="core-navigation-menu">
+          <button class="dropbtn">Core</button>
+          <div class="dropdown-content">
+            <a href="#">Core 1 incoming</a>
+          </div>
+        </div>
+        <div class="dropdown" id="core-navigation-menu">
+          <button class="dropbtn">Templates</button>
+          <div class="dropdown-content">
+            <a href="/blog/te-houtaewa-template.html">Te Houtaewa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <h1>Margins, Borders and Paddings</h1>
+      <h2>What are the differences? Where does the madness end?</h2>
+      <h3>26 March 2024</h3>
+      <ul>
+        <li><a href="#BasicsDescription">Basics</a></li>
+        <li><a href="#MarginDescription">Margin</a></li>
+        <li><a href="#BorderDescription">Border</a></li>
+        <li><a href="#PaddingDescription">Padding</a></li>
+        <li><a href="#ContentDescription">Content</a></li>
+      </ul>
+      <br />
+      <h4 id="BasicsDescription"><strong>What are the basics?</strong></h4>
+      <hr class="solid" />
+      <p>
+        The CSS box model breaks an HTML element down into four sub-sections for
+        the sake of sizing:
+      </p>
+      <img
+        src="/images/Boxmodell-detail.png"
+        alt="A diagram of the CSS Box Model"
+      />
+      <p>
+        These four parts of the box model each affect the way a browser
+        allocates space for the element.
+      </p>
+      <br />
+      <h4 id="MarginDescription"><strong>What is a margin?</strong></h4>
+      <hr class="solid" />
+      <p>
+        The <em>margin</em> is the distance that should be left between the
+        border and other elements. There's a bit of a 'gotcha' with margins
+        however: Top and Bottom margins can <strong>collapse</strong>. A
+        collapsing margin is not additive, and instead treats the total margin
+        of each element as the larger of their individual margins. For example,
+        two elements with vertical margins of 40px and 50px respectively may
+        only have an effective distance of 50px! Left and right margins,
+        however, are always additive. If those same elements were arranged
+        horizontally in an <code>inline-block</code> the effective total margin
+        distance would be 40+50=90px. Don't get caught out by this little quirk!
+      </p>
+      <br />
+      <h4 id="BorderDescription"><strong>What is a border?</strong></h4>
+      <hr class="solid" />
+      <p>
+        A border is exactly what it says on the tin: an optionally visible
+        perimeter around the HTML element. You can control the width, style etc
+        of this perimeter, but the important part for this discussion is the
+        <em>width</em> of the border. By default, the width grows
+        <em>outward</em>, meaning that the final size of an element is
+        influenced by the size of its border. It is possible, however, to change
+        this behaviour: setting <code>box-sizing: content-box;</code>
+        will cause the browser to account for any border or padding when you set
+        the element's width or height. Speaking of padding...
+      </p>
+      <br />
+      <h4 id="PaddingDescription"><strong>What is padding?</strong></h4>
+      <hr class="solid" />
+      <p>
+        Padding is the space between the <em>content</em> and the
+        <em>border</em>. It's mostly used as 'whitespace' (though it doesn't
+        have to be white!), and can enhance the visibiity of the content within
+        the element.
+      </p>
+      <br />
+      <h4 id="ContentDescription"><strong>What is content?</strong></h4>
+      <hr class="solid" />
+      <p>
+        In the web development world content isn't just text, it's the core part
+        of any HTML element. It could be an image, a clickable button, a link, a
+        form... anything you see on a webpage is, at its core, the content
+        section of an HTML element wrapped in all ther other parts of the box
+        model.
+      </p>
+    </div>
+  </body>
+
+  <footer>
+    <p class="footertext">&copy; Joel Allan 2024</p>
+  </footer>
+</html>
