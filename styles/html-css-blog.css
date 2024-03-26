@@ -21,6 +21,22 @@ ul {
   font-size: 1em;
 }
 
+#quick-nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#quick-nav-list li {
+  float: left;
+}
+
+#quick-nav-list li a {
+  display: block;
+  padding: 0 16px 0 0;
+}
+
 /* #box-model li {
   vertical-align: middle;
   padding: 1vmin;
