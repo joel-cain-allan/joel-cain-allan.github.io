@@ -253,7 +253,7 @@ h4::before {
     min-width: 180px;
     max-width: 400px;
   }
-  .main-content {
+  .content .main-content {
     width: 80%;
   }
 }
