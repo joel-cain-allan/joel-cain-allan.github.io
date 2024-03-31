@@ -246,9 +246,15 @@ h4::before {
   }
   .content {
     display: inline-flex;
+    width: 100%;
   }
   .left-content {
-    max-width: 20%;
+    width: 20%;
+    min-width: 180px;
+    max-width: 400px;
+  }
+  .main-content {
+    width: 80%;
   }
 }
 
