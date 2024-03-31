@@ -36,23 +36,3 @@ ul {
   display: block;
   padding: 0 16px 0 0;
 }
-
-/* #box-model li {
-  vertical-align: middle;
-  padding: 1vmin;
-  margin: 0;
-}
-#box-model {
-  display: inline-flexbox;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--vscode-tabs-editor-border, darkgrey);
-  width: fit-content;
-  margin: 0;
-  padding: 0;
-} */
-/* #box-model li {
-  float: left;
-} */
-/* #box-model ul {
-} */
