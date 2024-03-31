@@ -175,7 +175,7 @@ ul {
 }
 
 .main-content,
-.left-content {
+.right-content {
   background-color: var(--vscode-tabs-editor-background, grey);
   border-color: var(--vscode-tabs-editor-border, lightgrey);
   border-width: 1px;
@@ -248,7 +248,7 @@ h4::before {
     display: inline-flex;
     width: 100%;
   }
-  .left-content {
+  .right-content {
     width: 20%;
     min-width: 180px;
     max-width: 400px;
@@ -269,9 +269,9 @@ h4::before {
   }
   .content {
     display: inline-flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
-  .left-content {
+  .right-content {
     width: 100%;
   }
 }
