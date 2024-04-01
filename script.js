@@ -25,9 +25,14 @@ function addHeader() {
   var headerContentSpan = document.createElement('span')
 
   var headerImage = document.createElement('img')
-  headerImage.id = 'archie-head'
-  headerImage.src = '/images/archie-head-big.png'
-  headerImage.alt = 'apprehensive dog face'
+  if (getRandomInt(2) > 0) {
+    headerImage.src = '/images/archie-head-big.png'
+    headerImage.alt = 'apprehensive dog face'
+  } else {
+    headerImage.src = '/images/cindy-head-big.png'
+    headerImage.alt = 'cheeky dog face'
+  }
+  headerImage.id = 'dog-head'
   headerImage.width = '150'
   headerImage.height = '150'
 
@@ -73,3 +78,7 @@ function addLinks(dropdownId, keys) {
 
 addHeader()
 addNavigationMenu()
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max)
+}
