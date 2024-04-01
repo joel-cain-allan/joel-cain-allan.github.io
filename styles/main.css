@@ -58,10 +58,14 @@ img {
 /*Quick and dirty styling to reduce the size of an <a> relative to <button>s*/
 .fakedropbtn {
   padding: 0px 16px 3px;
+  font-family: 'Material Symbols Outlined';
 }
 
 .fakedropbtn:hover {
-  background-color: var(--darktheme-dropdown-background-hover, lightgrey);
+  background-color: var(
+    --darktheme-dropdown-background-hover,
+    lightgrey
+  ) !important;
   border-color: var(--darktheme-dropdown-border-hover, lightblue);
   border-width: 1px;
   border-style: solid;
