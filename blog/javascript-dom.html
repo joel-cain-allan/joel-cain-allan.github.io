@@ -19,9 +19,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <main-content>
-      <p>words</p>
-    </main-content>
+    <div class="main-content">
+      <h1>Javascript Fundamentals</h1>
+      <h2>Let's get some the basics out of the way</h2>
+      <h3>2 April 2024</h3>
+      <h4>What is JavaScript?</h4>
+      <p>
+        At it's core, JavaScript is a (and the name gives this away) Scripting
+        language. It is ubiquitous on the client-side of the web, and according
+        to wikipedia present in 99% of websites. <br /><br />At the most basic
+        level, JavaScript is a way to tell webpages to display content
+        dynamically, rather than being purely the equivalent of a poster put on
+        a wall. You can see this in action on this blog - the dog image in the
+        header is randomly selected between two options, and Javascript is what
+        allows that selection (and the subsequent display of the selected
+        image). The HTML and CSS represent the static content of a web-page, and
+        generally speaking are what you actually see, while JavaScript (JS) is
+        what does the actual heavy lifting.<br />
+        A much-used analogy is one of a house. The blueprint of the house's
+        framing, wall locations etc are HTML. The decorating choices, paint
+        colours, fixture design etc are CSS. The plumbing, wiring, heating and
+        appliances are JavaScript.
+      </p>
+      <hr />
+      <h4>Okay, but how do you actually write it?</h4>
+      <p>
+        That's a very expansive question! Let's focus on some of the core
+        concepts.
+      </p>
+      <p>
+        You can break down the logic behind JavaScript (or any object-oriented
+        language) into some smaller parts:
+      </p>
+      <ul>
+        <li>Objects</li>
+        <li>Functions</li>
+        <li>Control Flow</li>
+      </ul>
+      <hr />
+      <h4>Objects</h4>
+      <p>
+        Objects are a way of representing information in a container. That
+        sounds vague and tricky, but let me give you an example: <br /><br />
+        <img src="/images/let-color-black.png" alt="let color: 'black'" />
+        <br /><br />
+        That piece of JavaScript represents declaring a variable (a type of
+        object), with the <strong>let</strong> keyword, naming that variable
+        <strong>favouriteColour</strong>, and giving it a value of
+        <strong>"black"</strong>
+        <br /><br />
+        You could now call that <strong>favouriteColour</strong> variable
+        elsewhere in your code, and retrieve that
+        <strong>"black"</strong> value. That might not sound useful just yet,
+        but it's one of the most core features of any programming language.
+        <br />
+        Objects go far beyond just simple single-layer variable declarations
+        however, they can also represent <em>collections.</em> <br /><br />
+        Consider the scenario where we have a group of people, and we want to
+        record all of their favourite colours. Declaring a variable for each
+        like<br /><br />
+        <img
+          src="/images/let-many-colours.png"
+          alt="code example showing the declaration of multiple favourite colours: let tomsColour = 'blue', let sarashsColour='green', let gregsColour = 'white'"
+        /><br /><br />
+        <br />would be slow, tedious, and introduce a whole lot of variables
+        into the codebase. We could, instead, store those variables inside a
+        more complex object. <br /><br />
+        <img
+          src="/images/let-favourite-colours-object.png"
+          alt="code example showing declaring multiple favourite colours as key-value-pairs in a JS object. favouriteColours.greg = 'white' etc"
+        />
+        <br /><br />
+        We can add, change, or retrieve values from this new object with a key,
+        in this case the person's name.
+      </p>
+      <hr />
+      <h4>Arrays</h4>
+      <p>
+        An Array is a type of objec that is a collection - in this case
+        essentially a list of un-keyed elements. Consider your sock drawer. Your
+        socks probably don't have names, or other ways you refer to them, but
+        you do have a collection of socks in there. In code, that sock drawer
+        might look like this:
+        <br /><br />
+        <img
+          src="/images/sock-drawer-array.png"
+          alt="code example: let sockDrawer = ['sockPair1', 'sockPair2', 'oddSock1']"
+        />
+        <br /><br />
+        Unlike objects, you can't fetch values with a key -
+        <code>sockDrawer.sockPair2</code> is not going to achieve anything.
+        Instead, for arrays, you fetch their values with an <em>index</em>.
+        <br /><br />
+        <img
+          src="/images/sock-drawer-array-indexing.png"
+          alt="code example: let socks = sockDrawer[1]"
+        />
+        <br />
+        Note that indices do not start at 1! In Javascript, like most
+        programming languages (I'm looking at you Lua), array index counts begin
+        with 0. In the above code snippet index 1 actually refers to sockPair2.
+      </p>
+      <hr />
+      <h4>Functions</h4>
+      <p>
+        Functions are the meat and potatoes of code, and introduce reusable
+        logic. They are an encapsulated set of instructions that can accept
+        parameters (ie user-defined objects or functions) and use them as part
+        of their logic. This is very significant - without functions we would
+        need to re-declare logic constantly (and our control flow would be
+        disgusting, but that's a future topic).
+        <br />
+        <br />
+        Consider a task like cooking a meal, there are many small parts of the
+        recipe that must be performed, but many of those parts are actually
+        basic, reusable skills that are used for all meals. Cutting vegetables,
+        for instance, is always much the same process.
+        <br /><br />
+        <img
+          src="/images/vegetable-functions.png"
+          alt="code example showing other functions calling a 'cutVegetables(vegetable)' function"
+        />
+        <br /><br />
+        In a world without functions, we'd instead have to define the logic for
+        cutting vegetables every time!
+      </p>
+      <hr />
+      <h4>Control Flow</h4>
+      <p>
+        The control flow is the order in which code is executed. The most
+        straight-forward version of this is simply executing code from
+        top-to-bottom. For anything but the most basic script, however, there
+        will be wrinkles in that process. Calling a function causes the code in
+        that function to be executed before continuing from the point it called
+        that function, but called functions can call other functions too!
+        <br /><br />See this flow example:
+        <br />
+        <br />
+        <img
+          src="/images/basic-flow.png"
+          alt="code example setting up a control flow example; multiple functions logging out to console being called at different times"
+        />
+        <br /><br />
+        Which causes the following output:
+        <br /><br />
+        <img
+          src="/images/basic-flow-output.png"
+          alt="output of above code example, showing the order in which code executes"
+        />
+        <br />
+        <br />
+        A consistent and function-driven flow is useful, but misses a core
+        feature - what if we want to execute some code more than once? Well,
+        there's where loops come in!
+      </p>
+      <hr />
+      <h4>Loops</h4>
+      <p>
+        A loop allows code to be executed multiple times sequentially. Let's
+        look at a basic example of a loop in action:
+        <br />
+        <br />
+        <img
+          src="/images/simple-loop.png"
+          alt="code example: a basic loop incrementing the value i from 0 to 9, logging the value of i at each step"
+        />
+        <br />
+        <br />
+        This loop sets a variable with <code>let i = 0</code>, tells the loop to
+        run until i is equal to 10 with <code>i &#60; 10</code>, and tells the
+        loop to increase i by one after each loop with <code>i++</code>,
+        (ensuring that the loop won't continue infinitely). On each iteration of
+        the loop the console logs the value of i, first logging 0, then 1, then
+        2 ... until finally logging 9. Then, when i meets the termination
+        condition of being greater than 9 the loop terminates, and the control
+        flow continues on in the same top-to-bottom manner
+      </p>
+      <hr />
+      <h4>
+        That's all well and good, but how does JS actually interact with the
+        HTML and CSS?
+      </h4>
+      <p>
+        This is where the DOM (Document Object Model) comes in.<br />
+        <br />
+        The DOM is a document that consists of a logical tree, from a root down
+        many branches that terminate in nodes. Ultimately, a web-browser
+        interprets this DOM to display a webpage to you. JavaScript can
+        manipulate the DOM through a number of interfaces. For example, this
+        page sets the dog face on the header by using the document interface:
+        <br />
+        <br />
+        <img
+          src="/images/dog-dom-snippet.png"
+          alt="page source code showing an img element being created, having a random src selected for it, and then having its id, width and height set"
+        />
+        <br /><br />
+        You can see that document.createElement is used to create an
+        &#60;img&#62; HTML element, then that element's src, alt, id, width, and
+        height properties are set, and after all that it's added to an existing
+        span in the DOM like so:
+        <br /><br />
+        <img
+          src="/images/append-child.png"
+          alt="code: headerContentSpan.appendChild(headerImage)"
+        />
+        <br /><br />
+      </p>
+    </div>
   </body>
   <footer>
     <p class="footertext">&copy; Joel Allan 2024</p>

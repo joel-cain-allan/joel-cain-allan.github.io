@@ -22,9 +22,9 @@ function addHeader() {
   let headerDiv = document.createElement('div')
   headerDiv.id = 'floating-header'
 
-  var headerContentSpan = document.createElement('span')
+  let headerContentSpan = document.createElement('span')
 
-  var headerImage = document.createElement('img')
+  let headerImage = document.createElement('img')
   if (getRandomInt(2) > 0) {
     headerImage.src = '/images/archie-head-big.png'
     headerImage.alt = 'apprehensive dog face'
@@ -36,7 +36,7 @@ function addHeader() {
   headerImage.width = '150'
   headerImage.height = '150'
 
-  var headerContent = document.createElement('h1')
+  let headerContent = document.createElement('h1')
   headerContent.innerHTML = '.Blog {'
 
   headerContentSpan.appendChild(headerImage)
@@ -55,7 +55,7 @@ function addNavigationMenu() {
   href="/joel-cain-allan.github.io/" style="font-family:"Material Symbols Outlined"
   ">Home</a>`
 
-  var menuKeys = ['Tech', 'Core', 'Templates']
+  let menuKeys = ['Tech', 'Core', 'Templates']
 
   menuKeys.forEach((x) => {
     let lower = x.toLowerCase()
@@ -70,7 +70,7 @@ function addNavigationMenu() {
 }
 
 function addLinks(dropdownId, keys) {
-  var dropdown = document.getElementById(dropdownId)
+  let dropdown = document.getElementById(dropdownId)
   Object.keys(keys).forEach((x) => {
     dropdown.innerHTML += '<a href=' + keys[x] + '>' + x + '</a>'
   })
