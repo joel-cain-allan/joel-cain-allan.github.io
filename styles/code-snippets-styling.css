@@ -1,0 +1,14 @@
+pre {
+  width: fit-content;
+  color: ;
+}
+
+#userEnteredStringExampleOutput {
+  color: lightblue;
+}
+
+div #userTestSpace {
+  display: block;
+  width: fit-content;
+  height: 10px;
+}
