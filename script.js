@@ -27,10 +27,10 @@ function addHeader() {
   let headerImage = document.createElement('img')
   if (getRandomInt(2) > 0) {
     headerImage.src = '/images/archie-head-big.png'
-    headerImage.alt = 'apprehensive dog face'
+    headerImage.alt = 'apprehensive black-and-tan dog face'
   } else {
     headerImage.src = '/images/cindy-head-big.png'
-    headerImage.alt = 'cheeky dog face'
+    headerImage.alt = 'cheeky fluffy yellow dog face'
   }
   headerImage.id = 'dog-head'
   headerImage.width = '150'
