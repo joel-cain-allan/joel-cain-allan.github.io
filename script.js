@@ -2,6 +2,8 @@ const coreLinks = {
   'Identity + Values': '/blog/identity-values.html',
   'Learning Plan': '/blog/learning-plan.html',
   'Emotional Intelligence': '/blog/emotional-intelligence.html',
+  Neuroplasticity: '/blog/neuroplasticity.html',
+  'Te Whare Tapa Whā': '/blog/te-whare-tapa-wha.html',
 }
 
 const techLinks = {

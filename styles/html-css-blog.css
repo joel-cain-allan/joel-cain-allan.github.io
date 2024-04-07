@@ -7,11 +7,6 @@
   border-color: var(--vscode-tabs-editor-border, darkgrey);
 }
 
-h4 {
-  scroll-margin-top: 14vh;
-  font-size: 1.5em;
-}
-
 hr.solid {
   color: var(--vscode-font-color-comments, green);
   opacity: 50%;
