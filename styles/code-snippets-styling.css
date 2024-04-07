@@ -1,6 +1,5 @@
 pre {
   width: fit-content;
-  color: ;
 }
 
 #userEnteredStringExampleOutput {
@@ -11,4 +10,11 @@ div #userTestSpace {
   display: block;
   width: fit-content;
   height: 10px;
+}
+
+pre code {
+  background-color: var(--vscode-window-background, darkgrey) !important;
+  border: 1px;
+  border-style: solid;
+  border-color: var(--vscode-tabs-editor-border, lightgrey);
 }
