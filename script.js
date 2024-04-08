@@ -9,6 +9,7 @@ const coreLinks = {
 const techLinks = {
   'HTML-CSS': '/blog/html-css.html',
   'JS Fundamentals': '/blog/javascript-dom.html',
+  'Problem Solving': '/blog/problem-solving.html',
 }
 
 const templateLinks = {

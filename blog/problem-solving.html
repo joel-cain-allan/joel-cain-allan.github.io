@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stories and Legends (PAGE title)</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/archie-head.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Problem Solving</h1>
+      <h2>It's the name of the game</h2>
+      <h3>8 April 2024</h3>
+      <h4>A Problem I Was Once Stuck On</h4>
+      <p>
+        About a week ago I was working on a side project, moving from a
+        placeholder data layer to a SQLite database. If that sounds confusing,
+        basically I was building a more robust way to properly save (and
+        retrieve) data. This side project was a Windows desktop application,
+        rather than a website, and to cut a corner I decided to use Entity
+        Framework Core (an ORM or Object-relational mapper) to design the
+        database for me from my existing code. If you don't know what an ORM is,
+        it's basically a piece of code that it builds connections between a
+        database and data you might want to save or read within your own code.
+        <br /><br />I wasn't terribly familiar with EF Core, so when database
+        calls started throwing some errors, I had to investigate quite closely
+        to understand the cause. The errors were 'outside' of my code, being
+        thrown by the framework, and unhelpfully had a completely empty error
+        message - this made the problem worse, as Unit Testing (little tests
+        designed to check small pieces of functionality), were unable to give me
+        useful data beyond the fact that it wasn't working.
+        <br />
+        To solve the problem I dug through documentation without a lot of luck,
+        and ultimately deduced the problem by looking closely at which tests
+        were failing vs which were succeeding. I also wrote some additional
+        tests to isolate the exact database calls that were failing.
+        <br /><br />
+        It turns out that although EF Core tracks the entities (think: objects)
+        that you add or modify, it isn't good at handling nested objects by
+        itself. For instance, my problem was that it was incorrectly flagging
+        some data in a nested object as having changed, and then not seeing the
+        database change when it tried to persist those changes.
+        <br /><br />
+        Manually adding some logic to replace the not-actually-changed objects
+        with fresh ones straight from the database made EF Core work much more
+        smoothly. I still wonder if I would have been better off just building
+        the database tables myself, but I learned a lot about how EF Core works
+        at least!
+      </p>
+      <h4>A Time I Elegantly Solved a Problem</h4>
+      <p>
+        This one is going to be a little technical, but bear with me here.
+        <br />
+        <br />
+        Back when Wordle was a real fad, I amused myself with writing a twitter
+        bot that solved the daily wordle. When other 'dle' games started
+        appearing, I wrote solvers for some of those two. The one I'm going to
+        talk about is <a href="https://squaredle.app/">Squaredle</a>
+        <br /><br />
+        For the un-initiated, Squaredle is a bit like a wordfind. There's a grid
+        of letters, and a number of (unknown) words you must find within it.
+        Unlike a word find you aren't limited to sticking to moving in only a
+        single direction; for any given letter in Squaredle, you may select any
+        of the letters around it as the next letter in your solution/guess. For
+        example, on this grid you could select <strong>naive</strong>:
+      </p>
+      <br />
+      <img
+        src="/images/squaredle.png"
+        alt="a squaredle grid with the word naive outlined"
+      />
+      <p>
+        This presented a problem: how would I efficiently find words in the
+        grid?
+        <br />
+        Modelling the grid itself was fine - I could treat it as a
+        <a href="https://en.wikipedia.org/wiki/Graph_(abstract_data_type)"
+          >graph</a
+        >, but I still had a problem in dealing with what exactly IS a word, and
+        how will I actually search this graph for words? My first thought was to
+        take a copy of the scrabble dictionary, and then search it in a the most
+        efficient way possible. There was a problem, however. Dictionaries are
+        big! The time involved in reading through an entire dictionary and
+        checking for each word wasn't the sort of solution I would be happy
+        with.
+        <br />
+        After a little thought, I decided to tackle this problem with a tricky
+        type of data-structure - a
+        <a
+          href="https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton"
+          >DAWG</a
+        >, which is both a type of graph, and also as small as possible from a
+        memory standpoint. The graph properties made it very searchable - I
+        could heavily limit the number of words that needed checking, and the
+        samll size of the dictionary file fit some of my other requirements. A
+        perfect solution!
+        <br />
+        This might not be true for all of you, but for me there is very little
+        as satisfying as finding an elegant, correct solution for a problem.
+        It's a shot of adrenaline straight to the ego. I definitely learned the
+        value of looking outside-the-box for solutions to problems, and enjoyed
+        reaping the rewards.
+      </p>
+      <h4>Some Reflection Time</h4>
+      <p>
+        There are a number of problem solving techniques and processes, and
+        we're going to go through some and how I feel about them rapid-fire:
+      </p>
+      <ul>
+        <li class="gapList">
+          Pseudocode. The act of writing it out in a language-agnostic fashion
+          to get your head around a problem. It's definitely something I use
+          from time to time with complex problems, and am confident that I can
+          use it when necessary (although I avoid using it when it isn't)
+        </li>
+        <li class="gapList">
+          Trying Something. My personal favourite. I'm a tinkerer, I like to
+          look at cause and effect and work out the solution myself whenever
+          possible. Right in my wheelhouse
+        </li>
+        <li class="gapList">
+          Rubber Ducky. Trying something, but with a little rubber friend. I
+          usually talk to my dog rather than a duck, but verbalizing the problem
+          definitely gets some other parts of the brain working on it too. If
+          you haven't tried it, you should - it's shockingly helpful!
+        </li>
+        <li class="gapList">
+          Reading Error Messages. The first place to start whenever you get an
+          exception. Chances are it's going to point you in the right direction,
+          but even if it isn't immediately helpful it's a critical part of bug
+          hunting.
+        </li>
+        <li class="gapList">
+          Console.Logging. Great way of gathering information, definitely
+          something I use all the time when writing small methods that I don't
+          intend to unit-test right away. Saves a lot of time in the long run
+        </li>
+        <li class="gapList">
+          Googling. Google is absolutely your friend. If you can't find it in
+          StackOverflow, the docs, or someone's random blog chances are you're
+          asking the wrong questions.
+        </li>
+        <li class="gapList">
+          Asking your peers for help. Very useful if you're working on something
+          they understand well. Not something to be shy of doing, but I
+          personally work through the other problem-solving methods first.
+        </li>
+        <li class="gapList">
+          Asking coaches for help. Same deal as asking peers (but they're more
+          likely to be experts on it). Definitely one I'm comfortable doing if
+          my own efforts come up dry
+        </li>
+        <li class="gapList">
+          Improving your process with reflection. Taking some time to think
+          about your own problem solving techniques is definitely beneficial for
+          future problem solving. I'm very comfortable with the self-analysis
+          that requires, and it's definitely something I frequently work on.
+          We're all ultimately problem solvers.
+        </li>
+      </ul>
+      <br />
+      <h4>What About a Time You Were Reluctant to Ask for Help?</h4>
+      <p>
+        Honestly, not something I have trouble with. I'm very comfortable with
+        being imperfect, and I'm not afraid to ask for guidance when it's
+        needed. When it came to actual life-stuff I was always reluctant to ask
+        for help when I was in my teens, but now in my thirties I'm not so
+        afraid. I'm probably still too slow to ask for help, but only because
+        I'm confident I can find a solution. If I feel I can't, be sure I'm
+        going to ask!
+      </p>
+    </div>
+  </body>
+  <footer>
+    <p class="footertext">&copy; Joel Allan 2024</p>
+  </footer>
+  <script src="/script.js"></script>
+</html>
+-
