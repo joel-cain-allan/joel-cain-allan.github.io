@@ -4,7 +4,7 @@ const coreLinks = {
   'Emotional Intelligence': '/blog/emotional-intelligence.html',
   Neuroplasticity: '/blog/neuroplasticity.html',
   'Te Whare Tapa Whā': '/blog/te-whare-tapa-wha.html',
-  'Foundations Reflection': 'foundations-reflection.html',
+  'Foundations Reflection': '/blog/foundations-reflection.html',
 }
 
 const techLinks = {
